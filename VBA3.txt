@@ -1,0 +1,78 @@
+Public Function var_giver(sheetNamer As String) As String
+    ' Call Format_Freeze with the provided arguments
+    On Error GoTo killer
+    Dim defaultWB As String
+    defaultWB = ActiveWorkbook.Name
+    Call Format_Freeze(sheetNamer)
+    
+    ' Return the updated comb_error value
+    var_giver = comb_error
+killer:
+    var_giver = comb_error
+    
+End Function
+
+Public Sub Format_Freeze( _
+    sheetNamer As String, _
+    Optional ByRef comb_error As String = "", _
+    Optional colorIdx_Fill As Integer = 15, _
+    Optional work_BName As String _
+    )
+    On Error GoTo Stopped
+    Dim ws As Worksheet
+    Dim wb As Workbook
+    Dim headerRange As Range
+    
+    If Len(work_BName) = 0 Then
+        work_BName = ActiveWorkbook.Name
+    End If
+    
+
+    ' Check if the workbook is open
+    On Error Resume Next
+    Set wb = Workbooks(work_BName)
+    On Error GoTo 0
+
+    If wb Is Nothing Then
+        comb_error = "Workbook '" & workbookNamer & "' is not open or does not exist."
+        Exit Sub
+    End If
+
+    ' Check if the sheet exists in the workbook
+    On Error Resume Next
+    Set ws = wb.Sheets(sheetNamer)
+    On Error GoTo 0
+
+    If ws Is Nothing Then
+        comb_error = "Sheet '" & sheetNamer & "' does not exist in the workbook '" & workbookNamer & "'."
+        Exit Sub
+    End If
+
+    ' Define the header range (assuming headers are in the first row)
+    Set headerRange = ws.Range("A1", (Cells.End(xlToRight).Address))
+
+
+    ' Apply formatting to headers
+    With headerRange
+        .Borders.ColorIndex = 1
+        .Font.Bold = True
+        .Borders.Weight = -4138
+        .Interior.ColorIndex = colorIdx_Fill ' Light grey background
+    End With
+
+    ' Freeze top row
+    On Error GoTo Stopped
+    ws.Rows("2:2").Select
+    If ActiveWindow.FreezePanes = False Then
+        ActiveWindow.FreezePanes = True
+    End If
+
+    ' Clear selection
+    ws.Cells(1, 1).Select
+    comb_error = "Process ran successfully"
+    Exit Sub
+
+Stopped:
+    ' Capture error information
+    comb_error = Err.Description & " ~ ErrorNum: " & Err.Number
+End Sub
