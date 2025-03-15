@@ -1,0 +1,334 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="test_python" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="test_python_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/python" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Diagnostics;assembly=System.Diagnostics.Process" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Python</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Python.Activities</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="test_python" sap:VirtualizedContainerService.HintSize="1036.8,3392" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sco:Collection(sd:Process)" Name="allProcesses" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1036.8,300.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,190.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ProcessEndTriggerV2 DisplayName="Process End Trigger" Enabled="True" sap:VirtualizedContainerService.HintSize="416,130.4" sap2010:WorkflowViewState.IdRef="ProcessEndTriggerV2_2" ProcessName="ibgateway.exe" SchedulingMode="Sequential" TriggerId="0721c1fa-af93-471b-bf4e-7ba4ea65fe18" />
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <uix:NCheckState DisplayName="Check App State 'English'" sap:VirtualizedContainerService.HintSize="1036.8,2461.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V4">
+      <uix:NCheckState.IfExists>
+        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,91.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </uix:NCheckState.IfExists>
+      <uix:NCheckState.IfNotExists>
+        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="534.4,2211.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: IBKR Gateway" sap:VirtualizedContainerService.HintSize="500.8,2151.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="c3ec47b9-e1ae-44de-adda-6270dc142b06" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,1836.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="LiveAccount" />
+                    <Variable x:TypeArguments="x:String" Name="username" />
+                    <Variable x:TypeArguments="ss:SecureString" Name="passwordCred" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[LiveAccount]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[LiveAccount]" sap:VirtualizedContainerService.HintSize="433.6,504.8" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,276.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Live Trading'" sap:VirtualizedContainerService.HintSize="382.4,216.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c3ec47b9-e1ae-44de-adda-6270dc142b06" Version="V4">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CVScreenId="d912fb88-b8a2-4c1a-9b02-0154bae81c92" CvElementArea="223, 204, 177, 29" CvTextArea="272, 211, 88, 18" CvTextArgument="Live Trading" CvType="Button" DesignTimeRectangle="224, 205, 187, 29" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;java name='Live Trading' role='toggle button' /&gt;" FuzzySelectorArgument="&lt;java name='Live Trading' role='toggle button' check:text='Live Trading' /&gt;" Guid="4ff1e8b4-b9f4-4421-931d-872f934b4025" InformativeScreenshot="0f46fc15dd512a83284742074f5bfc85.png" ScopeSelectorArgument="&lt;wnd app='ibgateway.exe' cls='SunAwtFrame' title='IBKR Gateway' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="#PaperIBLogin" CacheStrategy="None" DisplayName="Get Credential" FolderPath="leatham222@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="433.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[passwordCred]" Username="[username]" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c3ec47b9-e1ae-44de-adda-6270dc142b06" Text="[username]" Version="V4">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CVScreenId="d912fb88-b8a2-4c1a-9b02-0154bae81c92" CvElementArea="226, 260, 372, 37" CvType="InputBox" DesignTimeRectangle="260, 269, 329, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;java name='Username' role='text' /&gt;" FuzzySelectorArgument="&lt;java name='Username' role='text' /&gt;" Guid="5f3c7c73-a37d-408b-b326-c59109b0939d" InformativeScreenshot="8d69e3b9bdbb90cf9ca5a648f23a6de5.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='ibgateway.exe' cls='SunAwtFrame' title='IBKR Gateway' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Visible">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="234, 271, 26, 16" ElementType="Text" FullSelectorArgument="&lt;java cls='JLabel' idx='10' role='label' /&gt;" FuzzySelectorArgument="&lt;java cls='JLabel' role='label' /&gt;" Guid="615d70de-56ca-4e9f-8f99-7a02eb1d6147" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Passoword" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="c3ec47b9-e1ae-44de-adda-6270dc142b06" SecureText="[passwordCred]" Version="V4">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CVScreenId="d912fb88-b8a2-4c1a-9b02-0154bae81c92" CvElementArea="224, 299, 376, 41" CvType="InputBox" DesignTimeRectangle="260, 309, 329, 21" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;java name='Password' role='password text' /&gt;" FuzzySelectorArgument="&lt;java name='Password' role='password text' /&gt;" Guid="0966c1f6-48b0-453f-8d3c-ffc71b643512" InformativeScreenshot="02acd38c5779fc24a311091991d281ee.png" ScopeSelectorArgument="&lt;wnd app='ibgateway.exe' cls='SunAwtFrame' title='IBKR Gateway' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="234, 311, 26, 16" ElementType="Text" FullSelectorArgument="&lt;java cls='JLabel' idx='11' role='label' /&gt;" FuzzySelectorArgument="&lt;java cls='JLabel' role='label' /&gt;" Guid="75c21b24-5cfb-4a7e-9eb4-0779a5fd4811" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="Input 'label'" Mode="TextChanges">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="260, 309, 329, 21" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;java name='Password' role='password text' /&gt;" FuzzySelectorArgument="&lt;java name='Password' role='password text' check:text='•••••••••••••••' /&gt;" Guid="091f93e6-b6e7-4934-9daa-f0e6f47ce4be" InformativeScreenshot="3793df1550bab275103a695870e9a0e5.png" ScopeSelectorArgument="&lt;wnd app='ibgateway.exe' cls='SunAwtFrame' title='IBKR Gateway' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="e1a17eb9-7442-435c-abad-b95fa175ec9f" CvElementArea="232, 308, 18, 19" CvType="Icon" DesignTimeRectangle="234, 311, 26, 16" ElementType="Text" FullSelectorArgument="&lt;java cls='JLabel' idx='11' role='label' /&gt;" FuzzySelectorArgument="&lt;java cls='JLabel' role='label' /&gt;" Guid="ccff7451-b19d-4727-9fb5-d6c304fd79c7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAYAAACaq43EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADsSURBVEhLYwjmV/lPbxwioP5/1GIUnKhp/X/1pFn/H925B8YgNkgMm1pSMF6LY1VM/z+6e/9/c2zG/0AgH4RBbJAYSA6bHmIxXovXTZ/3vyM5D0O8PSkXLIcuTgrGa/Hr5y/+BwhiigcIqv5/9ew5hjgpGK/FIIBNHITxyRGDsVrcnVny/+vnL2DD8YFvX76C1aLrJwZjtfjH9x//AwVQxbBhkBqQWmxyhDBWi0EAXQwXJkUtMgaBUYvBguhiuDApapEx1jgGpWhiExdILTY5QhirxV0ZxeCsQgh8//qNutmJHnjUYrrhEAH1/wDEHQQ1vLO1twAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:VerifyExecutionTypeIntoOptions.Target>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Paper Log In Button'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c3ec47b9-e1ae-44de-adda-6270dc142b06" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="d912fb88-b8a2-4c1a-9b02-0154bae81c92" CvElementArea="222, 369, 376, 45" CvTextArea="365, 383, 90, 18" CvTextArgument="Paper Log In" CvType="Button" DesignTimeRectangle="224, 370, 375, 46" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;java name='*Log In' role='push button' /&gt;" FuzzySelectorArgument="&lt;java name='*Log In' role='push button' check:text='Paper Log In' /&gt;" Guid="c384072c-abe6-48c2-b0e8-95455661ec16" InformativeScreenshot="23f4acbac635b8a7804dfe4479183544.png" ScopeSelectorArgument="&lt;wnd app='ibgateway.exe' cls='SunAwtFrame' title='IBKR Gateway' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="15" DisplayName="Click 'I understand and accept'" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c3ec47b9-e1ae-44de-adda-6270dc142b06" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="0db5b8f6-7554-48ca-b8e3-9215e1e32292" CvElementArea="167, 225, 176, 29" CvTextArea="186, 233, 139, 13" CvTextArgument="I understand and accept" CvType="Button" DesignTimeRectangle="169, 228, 175, 27" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;java name='I understand and accept' role='push button' /&gt;" FuzzySelectorArgument="&lt;java name='I understand and accept' role='push button' check:text='I understand and accept' /&gt;" Guid="a98decd1-300c-4bec-b1ef-14db21c1e896" InformativeScreenshot="4486398cda60b3e2a10dd49ab0d6f8a4.png" ScopeSelectorArgument="&lt;wnd app='ibgateway.exe' cls='SunAwtDialog' title='Warning' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Visible" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="565, 235, 790, 610" FilePath="C:\Jts\ibgateway\1033\ibgateway.exe" IconBase64="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" InformativeScreenshot="55e8d30597829bdfaa62aa718c22e099.png" Selector="&lt;wnd app='ibgateway.exe' cls='SunAwtFrame' title='IBKR Gateway' /&gt;" Title="IBKR Gateway" Version="V1" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </uix:NCheckState.IfNotExists>
+      <uix:NCheckState.Target>
+        <uix:TargetAnchorable DesignTimeRectangle="0, 0, 700, 549" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;java cls='JRootPane' role='root pane' /&gt;" Guid="8b26f215-478c-46a2-9590-705f2ec4abb8" InformativeScreenshot="9b817b5b726a1e6473f49813ad360c32.png" ScopeSelectorArgument="&lt;wnd app='ibgateway.exe' cls='SunAwtFrame' title='IBKR Gateway' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+      </uix:NCheckState.Target>
+    </uix:NCheckState>
+    <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="/k pytestbat.cmd" DisplayName="Start Process" FileName="cmd.exe" sap:VirtualizedContainerService.HintSize="1036.8,120" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1036.8,373.6" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="516.8,263.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="483.2,203.2" sap2010:WorkflowViewState.IdRef="PythonScope_1" Path="C:\Users\Jasson\AppData\Local\Microsoft\WindowsApps\" TargetPlatform="x64" Version="Python &gt;=3.10" WorkingFolder="C:\Users\Jasson\OneDrive\Documents\IBKR_Anaconda Learning\Part 4 Materials\IBKR\">
+            <p:PythonScope.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,143.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p:RunScript Code="{x:Null}" DisplayName="Run Python Script" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="RunScript_1" ScriptFile="C:\Users\Jasson\OneDrive\Documents\IBKR_Anaconda Learning\Part 4 Materials\IBKR\trader_Screener\PAPER_STK_IteratTrader_IBScreener(NO Rebl'nce overtrade fix).py" />
+                </Sequence>
+              </ActivityAction>
+            </p:PythonScope.Body>
+          </p:PythonScope>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <Sequence DisplayName="Login to IBKR" sap:VirtualizedContainerService.HintSize="1036.8,112.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+  </Sequence>
+</Activity>
